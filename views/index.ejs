@@ -1,0 +1,13 @@
+
+
+<h1><%= title %></h1>
+
+<a href="/new">New message</a>
+
+<% messages.forEach(function(message, index) { %>
+   <div> 
+      <p> <%= message.text %> </p>
+      <p> posted by <%= message.user %> on <%= message.added.toLocaleDateString() %> </p>
+      <a href="/message/<%= index %>">Open</a>     
+   </div>
+<% }); %>
